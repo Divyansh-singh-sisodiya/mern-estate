@@ -1,7 +1,7 @@
 import { useState } from 'react'; 
 import {Link, useNavigate} from 'react-router-dom';
 import{useDispatch, useSelector} from 'react-redux';
-import {signInStart,signInSuccess,signInFailure} from '../redux/user/userSlice'  
+import {signInStart,signInSuccess,signInFailure} from '../redux/user/userSlice'; 
 
 
 export default function SignIn() {
@@ -23,7 +23,7 @@ export default function SignIn() {
         {
           method: 'POST',
           headers:{
-            'content-Type': 'application/json',
+            'Content-Type': 'application/json',
           },
           body: JSON.stringify(formData),
   });
