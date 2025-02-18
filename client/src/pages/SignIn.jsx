@@ -29,7 +29,7 @@ export default function SignIn() {
   });
    const data = await res.json();
    console.log(data);
-   if(data.success == false){
+   if(data.success === false){
     dispatch(signInFailure(data.message));
     return;
    }
@@ -48,7 +48,7 @@ export default function SignIn() {
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input type="email" placeholder='email' className='border p-3 rounded-lg' id='email'onChange={handleChange} ></input>
         <input type="password" placeholder='password' className='border p-3 rounded-lg' id='password'onChange={handleChange} ></input>
-        <button disable={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>{loading?'Loading..': 'sign In '}</button>
+        <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'>{loading?'Loading..': 'sign In '}</button>
       </form>
       <div className='flex gap-2 mt-5'>
         <p> dont have an account?</p>
